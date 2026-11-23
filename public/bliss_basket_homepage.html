@@ -1,0 +1,795 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BLISS BASKET — Gifts That Feel Like Happiness.</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">/** @type {import('tailwindcss').Config} */
+globalThis.tailwind = globalThis.tailwind || {};
+globalThis.tailwind.config = {
+  darkMode: 'class',
+  theme: {
+    extend: {
+      colors: {
+        'warm-ivory': '#FFF9F3',
+        'blush-pink': '#F4DDE2',
+        'burgundy': '#762D43',
+        'champagne-gold': '#C9A66B',
+        'soft-rose': '#EBC6CE',
+        'dark-text': '#292329',
+        'success': '#2E6F40',
+        'on-success': '#FFFFFF',
+        'warning': '#9A6300',
+        'on-warning': '#FFFFFF',
+        'error': '#BA1A1A',
+        'on-error': '#FFFFFF',
+        'light-primary': '#762D43',
+        'light-on-primary': '#FFFFFF',
+        'light-primary-container': '#F4DDE2',
+        'light-on-primary-container': '#5A172D',
+        'light-secondary': '#C9A66B',
+        'light-on-secondary': '#292329',
+        'light-secondary-container': '#FFEED8',
+        'light-on-secondary-container': '#422C00',
+        'light-tertiary': '#EBC6CE',
+        'light-on-tertiary': '#292329',
+        'light-background': '#FFF9F3',
+        'light-on-background': '#292329',
+        'light-surface': '#FFF9F3',
+        'light-on-surface': '#292329',
+        'light-surface-container-lowest': '#FFFFFF',
+        'light-surface-container-low': '#FDF3EC',
+        'light-surface-container': '#F4DDE2',
+        'light-surface-container-high': '#EBC6CE',
+        'light-surface-variant': '#F5DDE0',
+        'light-on-surface-variant': '#534346',
+        'light-outline': '#867276',
+        'light-outline-variant': '#E3CFD3',
+      },
+      borderRadius: {
+        'sm': '4px',
+        'DEFAULT': '8px',
+        'md': '12px',
+        'lg': '16px',
+        'xl': '24px',
+        'full': '9999px',
+      },
+      spacing: {
+        'gutter-xs': '4px',
+        'gutter-sm': '8px',
+        'gutter-md': '16px',
+        'gutter-lg': '24px',
+        'gutter-xl': '32px',
+        'section-sm': '48px',
+        'section-lg': '80px',
+        'page-margin': '80px',
+      },
+      fontFamily: {
+        'display': ['"Libre Baskerville"', 'sans-serif'],
+        'headline': ['"Libre Baskerville"', 'sans-serif'],
+        'title': ['"Lato"', 'sans-serif'],
+        'body': ['"Lato"', 'sans-serif'],
+        'label': ['"Lato"', 'sans-serif'],
+        'mono': ['"Red Hat Mono"', 'monospace'],
+      },
+      fontSize: {
+        'display-lg': ['52px', { lineHeight: '60px', letterSpacing: '-0.5px', fontWeight: '700' }],
+        'display-lg-mobile': ['32px', { lineHeight: '40px', letterSpacing: '-0.25px', fontWeight: '700' }],
+        'display-md': ['40px', { lineHeight: '48px', letterSpacing: '-0.25px', fontWeight: '700' }],
+        'display-md-mobile': ['28px', { lineHeight: '36px', letterSpacing: '0px', fontWeight: '700' }],
+        'headline-lg': ['34px', { lineHeight: '42px', letterSpacing: '-0.25px', fontWeight: '700' }],
+        'headline-lg-mobile': ['24px', { lineHeight: '32px', letterSpacing: '0px', fontWeight: '700' }],
+        'headline-md': ['24px', { lineHeight: '32px', letterSpacing: '0px', fontWeight: '700' }],
+        'headline-sm': ['20px', { lineHeight: '28px', letterSpacing: '0px', fontWeight: '400' }],
+        'title-lg': ['18px', { lineHeight: '26px', letterSpacing: '0px', fontWeight: '700' }],
+        'title-md': ['16px', { lineHeight: '24px', letterSpacing: '0.1px', fontWeight: '700' }],
+        'body-lg': ['16px', { lineHeight: '26px', letterSpacing: '0.15px', fontWeight: '400' }],
+        'body-md': ['14px', { lineHeight: '22px', letterSpacing: '0.15px', fontWeight: '400' }],
+        'label-lg': ['14px', { lineHeight: '20px', letterSpacing: '0.4px', fontWeight: '700' }],
+        'label-sm': ['12px', { lineHeight: '16px', letterSpacing: '0.6px', fontWeight: '700' }],
+        'mono-sm': ['13px', { lineHeight: '18px', letterSpacing: '0.2px', fontWeight: '500' }],
+      },
+      transitionDuration: {
+        'state-change': '150ms',
+        'card-hover': '200ms',
+        'surface-enter': '300ms',
+      },
+      transitionDelay: {
+        'state-change': '0ms',
+        'card-hover': '0ms',
+        'surface-enter': '0ms',
+      },
+      transitionTimingFunction: {
+        'state-change': 'ease-out',
+        'card-hover': 'cubic-bezier(0.2, 0, 0, 1)',
+        'surface-enter': 'cubic-bezier(0.2, 0, 0, 1)',
+      },
+    },
+  },
+};
+if (typeof module !== 'undefined') module.exports = globalThis.tailwind.config;
+</script>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&amp;family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&amp;family=Red+Hat+Mono:wght@500&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+  <style>.material-symbols-outlined, .material-symbols-rounded, .material-symbols-sharp, .material-icons { display: inline-block; width: 1em; height: 1em; line-height: 1 !important; box-sizing: content-box; overflow: hidden; white-space: nowrap; direction: ltr; vertical-align: middle; }</style>
+</head>
+<body class="bg-light-surface text-light-on-surface font-body antialiased selection:bg-light-primary-container selection:text-light-on-primary-container">
+  <div class="min-h-[1024px] flex flex-col" data-stitch-vh="min-h-[1024px]===min-h-screen">
+
+    <!-- 1. Announcement Bar -->
+    <div class="bg-light-primary text-light-on-primary py-2.5 px-4">
+      <div class="max-w-7xl mx-auto flex items-center justify-center gap-3 text-center">
+        <span class="material-symbols-outlined text-title-md text-champagne-gold" aria-hidden="true">local_shipping</span>
+        <p class="font-body text-body-md" data-design-text-token="body-md">
+          Complimentary Pan-India Delivery on Orders Above ₹2,499 · Use Code
+          <span class="font-mono text-mono-sm bg-light-on-primary/15 px-2 py-0.5 rounded-sm" data-design-text-token="mono-sm">BLISS10</span>
+          for 10% Off Your First Hamper
+        </p>
+      </div>
+    </div>
+
+    <!-- 2. Premium Navigation Bar -->
+    <header class="sticky top-0 z-40 bg-light-surface border-b border-light-outline-variant">
+      <div class="max-w-7xl mx-auto px-6 lg:px-12 h-20 flex items-center justify-between gap-6">
+        <!-- Brand Logo -->
+        <a href="#top" class="flex flex-col shrink-0 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-light-primary rounded-sm">
+          <span class="font-headline text-headline-md text-light-primary tracking-wide" data-design-text-token="headline-md">BLISS BASKET</span>
+          <span class="font-label text-label-sm text-light-on-surface-variant" data-design-text-token="label-sm">Gifts That Feel Like Happiness.</span>
+        </a>
+
+        <!-- Primary Navigation -->
+        <nav aria-label="Primary Navigation" class="hidden lg:flex items-center gap-8">
+          <a href="#top" class="font-label text-label-lg text-light-primary border-b-2 border-light-primary pb-1" data-design-text-token="label-lg">Home</a>
+          <a href="#bestsellers" class="font-label text-label-lg text-light-on-surface hover:text-light-primary transition-colors duration-state-change ease-state-change pb-1" data-design-text-token="label-lg">Shop</a>
+          <a href="#occasions" class="font-label text-label-lg text-light-on-surface hover:text-light-primary transition-colors duration-state-change ease-state-change pb-1" data-design-text-token="label-lg">Occasions</a>
+          <a href="#build-your-hamper" class="font-label text-label-lg text-light-on-surface hover:text-light-primary transition-colors duration-state-change ease-state-change pb-1" data-design-text-token="label-lg">Build Your Hamper</a>
+          <a href="#personalized" class="font-label text-label-lg text-light-on-surface hover:text-light-primary transition-colors duration-state-change ease-state-change pb-1" data-design-text-token="label-lg">About Us</a>
+        </nav>
+
+        <!-- Utility Icons -->
+        <div class="flex items-center gap-3">
+          <button data-component-id="button-icon" data-component-type="button" data-component-variant="icon" type="button" aria-label="Search hampers" class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-light-surface-container-lowest text-light-on-surface border border-light-outline-variant transition-colors duration-state-change ease-state-change hover:bg-light-primary-container hover:text-light-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-light-primary">
+            <span class="material-symbols-outlined text-title-lg" aria-hidden="true">search</span>
+          </button>
+
+          <button data-component-id="button-icon" data-component-type="button" data-component-variant="icon" type="button" aria-label="My account" class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-light-surface-container-lowest text-light-on-surface border border-light-outline-variant transition-colors duration-state-change ease-state-change hover:bg-light-primary-container hover:text-light-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-light-primary">
+            <span class="material-symbols-outlined text-title-lg" aria-hidden="true">person</span>
+          </button>
+
+          <button data-component-id="button-icon" data-component-type="button" data-component-variant="icon" type="button" aria-label="Wishlist" class="relative inline-flex h-10 w-10 items-center justify-center rounded-full bg-light-surface-container-lowest text-light-on-surface border border-light-outline-variant transition-colors duration-state-change ease-state-change hover:bg-light-primary-container hover:text-light-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-light-primary">
+            <span class="material-symbols-outlined text-title-lg" aria-hidden="true">favorite</span>
+          </button>
+
+          <button data-component-id="button-icon" data-component-type="button" data-component-variant="icon" type="button" aria-label="Shopping bag with 2 items" id="header-bag-btn" class="relative inline-flex h-10 w-10 items-center justify-center rounded-full bg-light-surface-container-lowest text-light-on-surface border border-light-outline-variant transition-colors duration-state-change ease-state-change hover:bg-light-primary-container hover:text-light-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-light-primary">
+            <span class="material-symbols-outlined text-title-lg" aria-hidden="true">shopping_bag</span>
+            <span id="bag-count-badge" data-component-id="badge-numeric" data-component-type="badge" data-component-variant="numeric" aria-hidden="true" class="absolute -top-1 -right-1 inline-flex h-5 min-w-5 items-center justify-center rounded-full bg-light-primary text-light-on-primary px-1.5 tabular-nums">
+              <span class="font-label text-label-sm" data-design-text-token="label-sm">2</span>
+            </span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="top" class="flex-1">
+
+      <!-- 3. Large Editorial Hero Section -->
+      <section class="bg-light-surface py-12 lg:py-20">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+          <!-- Hero Copy -->
+          <div class="lg:col-span-6 flex flex-col items-start gap-6">
+            <span data-component-id="badge-eyebrow" data-component-type="badge" data-component-variant="status" role="status" class="inline-flex items-center gap-2 rounded-full bg-light-primary-container text-light-on-primary-container px-4 py-1.5">
+              <span class="material-symbols-outlined text-title-md text-light-primary" aria-hidden="true">auto_awesome</span>
+              <span class="font-label text-label-sm uppercase" data-design-text-token="label-sm">Curated Luxury Gifting Atelier</span>
+            </span>
+
+            <h1 data-component-id="typography-display" data-component-type="typography" data-component-variant="display" data-design-text-token="display-lg" class="font-display text-display-lg-mobile lg:text-display-lg text-light-on-surface text-balance">
+              Make Every Moment Unforgettable.
+            </h1>
+
+            <p data-component-id="typography-body" data-component-type="typography" data-component-variant="body" data-design-text-token="body-lg" class="font-body text-body-lg text-light-on-surface-variant max-w-prose text-pretty">
+              Thoughtfully curated gifts that turn ordinary moments into beautiful memories. Hand-packed in keepsake linen boxes with artisanal Indian delicacies, botanical skincare, and wax-sealed notes.
+            </p>
+
+            <div class="flex flex-wrap items-center gap-4 pt-2">
+              <a href="#bestsellers" data-component-id="button-primary" data-component-type="button" data-component-variant="primary" class="inline-flex items-center justify-center gap-2 rounded-full bg-light-primary text-light-on-primary px-7 py-3.5 shadow-sm transition-colors duration-state-change ease-state-change hover:bg-burgundy/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-light-primary focus-visible:ring-offset-2">
+                <span class="font-label text-label-lg" data-design-text-token="label-lg">Explore Hampers</span>
+                <span class="material-symbols-outlined text-title-md" aria-hidden="true">arrow_forward</span>
+              </a>
+
+              <a href="#build-your-hamper" data-component-id="button-secondary" data-component-type="button" data-component-variant="secondary" class="inline-flex items-center justify-center gap-2 rounded-full border border-light-primary bg-light-surface-container-lowest text-light-primary px-7 py-3.5 transition-colors duration-state-change ease-state-change hover:bg-light-primary-container focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-light-primary focus-visible:ring-offset-2">
+                <span class="material-symbols-outlined text-title-md" aria-hidden="true">redeem</span>
+                <span class="font-label text-label-lg" data-design-text-token="label-lg">Build Your Own</span>
+              </a>
+            </div>
+
+            <!-- Trust Micro-Strip -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-6 border-t border-light-outline-variant w-full">
+              <div class="flex items-center gap-2.5">
+                <span class="material-symbols-outlined text-light-primary" aria-hidden="true">schedule</span>
+                <span class="font-body text-body-md text-light-on-surface-variant" data-design-text-token="body-md">Same-day Mumbai &amp; Delhi NCR</span>
+              </div>
+              <div class="flex items-center gap-2.5">
+                <span class="material-symbols-outlined text-light-primary" aria-hidden="true">edit_note</span>
+                <span class="font-body text-body-md text-light-on-surface-variant" data-design-text-token="body-md">Handwritten Note Included</span>
+              </div>
+              <div class="flex items-center gap-2.5">
+                <span class="material-symbols-outlined text-champagne-gold" style="font-variation-settings: &#39;FILL&#39; 1;" aria-hidden="true">star</span>
+                <span class="font-body text-body-md text-light-on-surface-variant tabular-nums" data-design-text-token="body-md">4.9/5 from 4,200+ Gifts</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero Editorial Image -->
+          <div class="lg:col-span-6">
+            <div class="relative rounded-xl overflow-hidden bg-light-surface-container-low border border-light-outline-variant shadow-md">
+              <img src="https://lh3.googleusercontent.com/aida/ALJJyrCVHU4dqT_uJJZe1QT0ClVBwKRgeia3CKfZZW42to02udQQoKwrQejMBMH7bD2Uv-Va-3AHZP08o-UktsyGsFHf-Z7MlVQIz-KLMupoKfc84e8zwGXqNCEu0_dPiskDtCedZZFz73P7EfaSTrCs6xIe8F7WrUjo9KYnd_pvZKD0w7rpucRflEKO1mlJ42bFpjozJHw7-3nImiwHjmWW9uwX_zlxRGlDjyi0NLXrOFPEeuK4kVp6" alt="Luxury ivory linen Bliss Basket gift hamper tied with a burgundy silk ribbon containing Belgian chocolates, rosewater mist, and brass candle" class="w-full aspect-[4/3] object-cover">
+              <div class="absolute bottom-5 left-5 right-5 sm:right-auto bg-light-surface-container-lowest/95 border border-light-outline-variant rounded-md px-5 py-3.5 shadow-sm flex items-center gap-4">
+                <span class="material-symbols-outlined text-light-primary text-headline-md" aria-hidden="true">workspace_premium</span>
+                <div class="flex flex-col">
+                  <span class="font-title text-title-md text-light-on-surface" data-design-text-token="title-md">Signature Keepsake Packaging</span>
+                  <span class="font-body text-body-md text-light-on-surface-variant" data-design-text-token="body-md">Handcrafted linen boxes &amp; satin ribbons</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. Shop by Occasion Section -->
+      <section id="occasions" class="bg-light-surface-container-low py-16 lg:py-20 border-y border-light-outline-variant">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col gap-10">
+          <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+            <div class="flex flex-col gap-2">
+              <span class="font-label text-label-sm uppercase text-light-primary" data-design-text-token="label-sm">Celebrate Every Milestone</span>
+              <h2 class="font-headline text-headline-lg-mobile lg:text-headline-lg text-light-on-surface" data-design-text-token="headline-lg">Shop by Occasion</h2>
+            </div>
+            <p class="font-body text-body-md text-light-on-surface-variant max-w-md" data-design-text-token="body-md">
+              From intimate birthdays to grand Indian weddings and executive milestones, discover hampers tailored to the moment.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 lg:gap-6 items-stretch">
+            <!-- Occasion 1: Birthday -->
+            <a href="#bestsellers" data-component-id="card-interactive" data-component-type="card" data-component-variant="interactive" class="h-full rounded-md bg-light-surface-container-lowest border border-light-outline-variant p-5 transition-all duration-card-hover ease-card-hover hover:bg-light-primary-container hover:-translate-y-0.5 flex flex-col justify-between gap-4">
+              <div class="h-12 w-12 rounded-full bg-light-primary-container text-light-primary flex items-center justify-center">
+                <span class="material-symbols-outlined text-headline-md" aria-hidden="true">cake</span>
+              </div>
+              <div class="flex flex-col gap-1">
+                <h3 class="font-headline text-headline-sm text-light-on-surface" data-design-text-token="headline-sm">Birthday</h3>
+                <p class="font-body text-body-md text-light-on-surface-variant" data-design-text-token="body-md">Joyful surprises</p>
+              </div>
+            </a>
+
+            <!-- Occasion 2: Anniversary -->
+            <a href="#bestsellers" data-component-id="card-interactive" data-component-type="card" data-component-variant="interactive" class="h-full rounded-md bg-light-surface-container-lowest border border-light-outline-variant p-5 transition-all duration-card-hover ease-card-hover hover:bg-light-primary-container hover:-translate-y-0.5 flex flex-col justify-between gap-4">
+              <div class="h-12 w-12 rounded-full bg-light-primary-container text-light-primary flex items-center justify-center">
+                <span class="material-symbols-outlined text-headline-md" aria-hidden="true">favorite</span>
+              </div>
+              <div class="flex flex-col gap-1">
+                <h3 class="font-headline text-headline-sm text-light-on-surface" data-design-text-token="headline-sm">Anniversary</h3>
+                <p class="font-body text-body-md text-light-on-surface-variant" data-design-text-token="body-md">Romantic keepsakes</p>
+              </div>
+            </a>
+
+            <!-- Occasion 3: Wedding -->
+            <a href="#bestsellers" data-component-id="card-interactive" data-component-type="card" data-component-variant="interactive" class="h-full rounded-md bg-light-surface-container-lowest border border-light-outline-variant p-5 transition-all duration-card-hover ease-card-hover hover:bg-light-primary-container hover:-translate-y-0.5 flex flex-col justify-between gap-4">
+              <div class="h-12 w-12 rounded-full bg-light-primary-container text-light-primary flex items-center justify-center">
+                <span class="material-symbols-outlined text-headline-md" aria-hidden="true">diamond</span>
+              </div>
+              <div class="flex flex-col gap-1">
+                <h3 class="font-headline text-headline-sm text-light-on-surface" data-design-text-token="headline-sm">Wedding</h3>
+                <p class="font-body text-body-md text-light-on-surface-variant" data-design-text-token="body-md">Trousseau &amp; favours</p>
+              </div>
+            </a>
+
+            <!-- Occasion 4: Festive -->
+            <a href="#bestsellers" data-component-id="card-interactive" data-component-type="card" data-component-variant="interactive" class="h-full rounded-md bg-light-surface-container-lowest border border-light-outline-variant p-5 transition-all duration-card-hover ease-card-hover hover:bg-light-primary-container hover:-translate-y-0.5 flex flex-col justify-between gap-4">
+              <div class="h-12 w-12 rounded-full bg-light-primary-container text-light-primary flex items-center justify-center">
+                <span class="material-symbols-outlined text-headline-md" aria-hidden="true">celebration</span>
+              </div>
+              <div class="flex flex-col gap-1">
+                <h3 class="font-headline text-headline-sm text-light-on-surface" data-design-text-token="headline-sm">Festive</h3>
+                <p class="font-body text-body-md text-light-on-surface-variant" data-design-text-token="body-md">Diwali &amp; Rakhi edits</p>
+              </div>
+            </a>
+
+            <!-- Occasion 5: Corporate -->
+            <a href="#bestsellers" data-component-id="card-interactive" data-component-type="card" data-component-variant="interactive" class="h-full rounded-md bg-light-surface-container-lowest border border-light-outline-variant p-5 transition-all duration-card-hover ease-card-hover hover:bg-light-primary-container hover:-translate-y-0.5 flex flex-col justify-between gap-4">
+              <div class="h-12 w-12 rounded-full bg-light-primary-container text-light-primary flex items-center justify-center">
+                <span class="material-symbols-outlined text-headline-md" aria-hidden="true">business_center</span>
+              </div>
+              <div class="flex flex-col gap-1">
+                <h3 class="font-headline text-headline-sm text-light-on-surface" data-design-text-token="headline-sm">Corporate</h3>
+                <p class="font-body text-body-md text-light-on-surface-variant" data-design-text-token="body-md">Client &amp; team gifting</p>
+              </div>
+            </a>
+
+            <!-- Occasion 6: Just Because -->
+            <a href="#bestsellers" data-component-id="card-interactive" data-component-type="card" data-component-variant="interactive" class="h-full rounded-md bg-light-surface-container-lowest border border-light-outline-variant p-5 transition-all duration-card-hover ease-card-hover hover:bg-light-primary-container hover:-translate-y-0.5 flex flex-col justify-between gap-4">
+              <div class="h-12 w-12 rounded-full bg-light-primary-container text-light-primary flex items-center justify-center">
+                <span class="material-symbols-outlined text-headline-md" aria-hidden="true">spa</span>
+              </div>
+              <div class="flex flex-col gap-1">
+                <h3 class="font-headline text-headline-sm text-light-on-surface" data-design-text-token="headline-sm">Just Because</h3>
+                <p class="font-body text-body-md text-light-on-surface-variant" data-design-text-token="body-md">Thoughtful gestures</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. Bestselling Hampers Product Grid -->
+      <section id="bestsellers" class="bg-light-surface py-16 lg:py-20">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col gap-10">
+          <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+            <div class="flex flex-col gap-2">
+              <span class="font-label text-label-sm uppercase text-light-primary" data-design-text-token="label-sm">Most Loved Curations</span>
+              <h2 class="font-headline text-headline-lg-mobile lg:text-headline-lg text-light-on-surface" data-design-text-token="headline-lg">Bestselling Hampers</h2>
+            </div>
+            <a href="#bestsellers" class="inline-flex items-center gap-1.5 font-label text-label-lg text-light-primary hover:underline">
+              <span data-design-text-token="label-lg">View All Collections</span>
+              <span class="material-symbols-outlined text-title-md" aria-hidden="true">arrow_forward</span>
+            </a>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
+            <!-- Product 1 -->
+            <article data-component-id="card-action" data-component-type="card" data-component-variant="action" class="h-full rounded-md bg-light-surface-container-lowest border border-light-outline-variant overflow-hidden shadow-sm transition-transform duration-card-hover ease-card-hover hover:-translate-y-0.5 flex flex-col justify-between">
+              <div>
+                <div class="relative overflow-hidden bg-light-surface-container-low">
+                  <img src="https://lh3.googleusercontent.com/aida/ALJJyrClzgGXxkv6QCAyVLc5weOiRwVW1Qac-WfbgTM_Q8aZFO0sbfPmLNQFVWa4gyP4z6EqqJfyya8AvA9avqK95e25v80LYRreCMvTvLgXwJfEPF3mnw5WydmDMfuBOAvppmYnZ4aixCa3jcaDnT_BLTnXdI5ADfKBuI92ILIDXcULUSSoiiZ5dPwY9L7DVrFFh64lWKQ6q90auHEHLBh_I4HV-5O-U3tvhAA_S76R5RvImPGmxo6yPgfseYKYz78" alt="The Velvet Rose Edit gift hamper" class="w-full aspect-[4/3] object-cover">
+                  <span data-component-id="badge-status" data-component-type="badge" data-component-variant="status" class="absolute top-3 left-3 inline-flex items-center rounded-full bg-light-secondary-container text-light-on-secondary-container px-3 py-1">
+                    <span class="font-label text-label-sm uppercase" data-design-text-token="label-sm">Bestseller</span>
+                  </span>
+                  <button type="button" aria-label="Save Velvet Rose Edit to wishlist" onclick="toggleWishlist(this)" class="absolute top-3 right-3 inline-flex h-9 w-9 items-center justify-center rounded-full bg-light-surface-container-lowest/90 text-light-on-surface border border-light-outline-variant transition-colors duration-state-change hover:text-light-primary">
+                    <span class="material-symbols-outlined text-title-md" aria-hidden="true">favorite</span>
+                  </button>
+                </div>
+                <div class="p-5 flex flex-col gap-2">
+                  <div class="flex items-center gap-1.5">
+                    <span class="material-symbols-outlined text-title-md text-champagne-gold" style="font-variation-settings: &#39;FILL&#39; 1;" aria-hidden="true">star</span>
+                    <span class="font-label text-label-sm text-light-on-surface tabular-nums" data-design-text-token="label-sm">4.9 (128)</span>
+                  </div>
+                  <h3 class="font-headline text-headline-sm text-light-on-surface" data-design-text-token="headline-sm">Velvet Rose Edit</h3>
+                  <p class="font-body text-body-md text-light-on-surface-variant" data-design-text-token="body-md">Rosewater mist, Belgian dark truffles &amp; hand-poured soy candle.</p>
+                </div>
+              </div>
+              <footer class="px-5 pb-5 pt-2 flex flex-col gap-3">
+                <p class="font-title text-title-lg text-light-primary tabular-nums" data-design-text-token="title-lg">₹3,499</p>
+                <button type="button" onclick="addToBag(this)" class="w-full inline-flex items-center justify-center gap-2 rounded-full bg-light-primary text-light-on-primary px-5 py-2.5 transition-colors duration-state-change ease-state-change hover:bg-burgundy/90">
+                  <span class="material-symbols-outlined text-title-md" aria-hidden="true">shopping_bag</span>
+                  <span class="font-label text-label-lg" data-design-text-token="label-lg">Add to Bag</span>
+                </button>
+              </footer>
+            </article>
+
+            <!-- Product 2 -->
+            <article data-component-id="card-action" data-component-type="card" data-component-variant="action" class="h-full rounded-md bg-light-surface-container-lowest border border-light-outline-variant overflow-hidden shadow-sm transition-transform duration-card-hover ease-card-hover hover:-translate-y-0.5 flex flex-col justify-between">
+              <div>
+                <div class="relative overflow-hidden bg-light-surface-container-low">
+                  <img src="https://lh3.googleusercontent.com/aida/ALJJyrANtYZwP8ycat7zn0a_KRtq2voHHzzwE5tDr91hGJwfoQTCb-_nbqrM5c4hR5QYwcgZZqJz7S5gUetS0CKkiVsyLPrIjZiVNMI-sMvZJfrP7v1EEqbANFKZZzm8IvZ_s9fx7IUPKUJ6NsB2qHCK9JYunob8q8oaa70E71CP-JBuyBK2St67vx29HPQydvxQ_NGsRXRtA7PcgF4AqxKDQJC3ZhzzZmFZ1xkPc6Dnno5A-3XmSOgaE0iPXEbkh0zWgw" alt="Royal Festive Box gift hamper" class="w-full aspect-[4/3] object-cover">
+                  <span data-component-id="badge-festive" data-component-type="badge" data-component-variant="status" class="absolute top-3 left-3 inline-flex items-center rounded-full bg-light-primary text-light-on-primary px-3 py-1">
+                    <span class="font-label text-label-sm uppercase" data-design-text-token="label-sm">Festive Edit</span>
+                  </span>
+                  <button type="button" aria-label="Save Royal Festive Box to wishlist" onclick="toggleWishlist(this)" class="absolute top-3 right-3 inline-flex h-9 w-9 items-center justify-center rounded-full bg-light-surface-container-lowest/90 text-light-on-surface border border-light-outline-variant transition-colors duration-state-change hover:text-light-primary">
+                    <span class="material-symbols-outlined text-title-md" aria-hidden="true">favorite</span>
+                  </button>
+                </div>
+                <div class="p-5 flex flex-col gap-2">
+                  <div class="flex items-center gap-1.5">
+                    <span class="material-symbols-outlined text-title-md text-champagne-gold" style="font-variation-settings: &#39;FILL&#39; 1;" aria-hidden="true">star</span>
+                    <span class="font-label text-label-sm text-light-on-surface tabular-nums" data-design-text-token="label-sm">5.0 (94)</span>
+                  </div>
+                  <h3 class="font-headline text-headline-sm text-light-on-surface" data-design-text-token="headline-sm">Royal Festive Box</h3>
+                  <p class="font-body text-body-md text-light-on-surface-variant" data-design-text-token="body-md">Kashmiri saffron kahwa, brass tealight diya &amp; roasted almonds.</p>
+                </div>
+              </div>
+              <footer class="px-5 pb-5 pt-2 flex flex-col gap-3">
+                <p class="font-title text-title-lg text-light-primary tabular-nums" data-design-text-token="title-lg">₹4,899</p>
+                <button type="button" onclick="addToBag(this)" class="w-full inline-flex items-center justify-center gap-2 rounded-full bg-light-primary text-light-on-primary px-5 py-2.5 transition-colors duration-state-change ease-state-change hover:bg-burgundy/90">
+                  <span class="material-symbols-outlined text-title-md" aria-hidden="true">shopping_bag</span>
+                  <span class="font-label text-label-lg" data-design-text-token="label-lg">Add to Bag</span>
+                </button>
+              </footer>
+            </article>
+
+            <!-- Product 3 -->
+            <article data-component-id="card-action" data-component-type="card" data-component-variant="action" class="h-full rounded-md bg-light-surface-container-lowest border border-light-outline-variant overflow-hidden shadow-sm transition-transform duration-card-hover ease-card-hover hover:-translate-y-0.5 flex flex-col justify-between">
+              <div>
+                <div class="relative overflow-hidden bg-light-surface-container-low">
+                  <img src="https://lh3.googleusercontent.com/aida/ALJJyrCmHsl3Mw-CEn2BkYH1-vmVuynhFoXMCw58K2YfPO5MlYY0kWlsHfmIVOEuqoA9wP-dZUiDhpEBEiv-VVT-t9w_3W5r5FIkQSaVgfMCikjebFqa1yAN0fjjsfsUlE5lOYqKfVlfS7bYNdTQZ9reeRBLGQQ_wpLgCC7WMfkB51AG8HwxX2dlkP9sB6V4lfTRpIaNvN_NbX-DtYYB9e6CRAxosOKhgtvHQVWjNjsjde24P34PGMscx7gMrl7oDYvTcao7_bs" alt="Gentleman&#39;s Reserve gift hamper" class="w-full aspect-[4/3] object-cover">
+                  <span data-component-id="badge-status" data-component-type="badge" data-component-variant="status" class="absolute top-3 left-3 inline-flex items-center rounded-full bg-light-secondary-container text-light-on-secondary-container px-3 py-1">
+                    <span class="font-label text-label-sm uppercase" data-design-text-token="label-sm">Corporate Fav</span>
+                  </span>
+                  <button type="button" aria-label="Save Gentleman&#39;s Reserve to wishlist" onclick="toggleWishlist(this)" class="absolute top-3 right-3 inline-flex h-9 w-9 items-center justify-center rounded-full bg-light-surface-container-lowest/90 text-light-on-surface border border-light-outline-variant transition-colors duration-state-change hover:text-light-primary">
+                    <span class="material-symbols-outlined text-title-md" aria-hidden="true">favorite</span>
+                  </button>
+                </div>
+                <div class="p-5 flex flex-col gap-2">
+                  <div class="flex items-center gap-1.5">
+                    <span class="material-symbols-outlined text-title-md text-champagne-gold" style="font-variation-settings: &#39;FILL&#39; 1;" aria-hidden="true">star</span>
+                    <span class="font-label text-label-sm text-light-on-surface tabular-nums" data-design-text-token="label-sm">4.8 (76)</span>
+                  </div>
+                  <h3 class="font-headline text-headline-sm text-light-on-surface" data-design-text-token="headline-sm">Gentleman&#39;s Reserve</h3>
+                  <p class="font-body text-body-md text-light-on-surface-variant" data-design-text-token="body-md">Nilgiri single-origin roast, linen journal &amp; 70% cacao bar.</p>
+                </div>
+              </div>
+              <footer class="px-5 pb-5 pt-2 flex flex-col gap-3">
+                <p class="font-title text-title-lg text-light-primary tabular-nums" data-design-text-token="title-lg">₹4,250</p>
+                <button type="button" onclick="addToBag(this)" class="w-full inline-flex items-center justify-center gap-2 rounded-full bg-light-primary text-light-on-primary px-5 py-2.5 transition-colors duration-state-change ease-state-change hover:bg-burgundy/90">
+                  <span class="material-symbols-outlined text-title-md" aria-hidden="true">shopping_bag</span>
+                  <span class="font-label text-label-lg" data-design-text-token="label-lg">Add to Bag</span>
+                </button>
+              </footer>
+            </article>
+
+            <!-- Product 4 -->
+            <article data-component-id="card-action" data-component-type="card" data-component-variant="action" class="h-full rounded-md bg-light-surface-container-lowest border border-light-outline-variant overflow-hidden shadow-sm transition-transform duration-card-hover ease-card-hover hover:-translate-y-0.5 flex flex-col justify-between">
+              <div>
+                <div class="relative overflow-hidden bg-light-surface-container-low">
+                  <img src="https://lh3.googleusercontent.com/aida/ALJJyrCgH4vRDS0EBCdSnY4st5JJ_Vfqh8x7iCFmgBT57FvUB0lhUu_h5eiKtuK-_D-vRmQgpF5IL-P2URqBmrxgHaW6u1ze97XC0Vu28HZftSrOU8JtTYeG1w1AzZWLhBeBnbpn9gmRcTxD-5ouIrEV0mKqmAN61zvSb-YMCLpBXUW6tkqVdywbizxdRRQUCVr-C7fsFCCx-d2eMcp1Ol5rvaEwrALq9tmtlOvhEWnh4ZsRQgOORRoO76GozOWUQL4GrFzequZt" alt="Self-Care Sanctuary gift hamper" class="w-full aspect-[4/3] object-cover">
+                  <span data-component-id="badge-new" data-component-type="badge" data-component-variant="status" class="absolute top-3 left-3 inline-flex items-center rounded-full bg-light-primary-container text-light-on-primary-container px-3 py-1">
+                    <span class="font-label text-label-sm uppercase" data-design-text-token="label-sm">New Arrival</span>
+                  </span>
+                  <button type="button" aria-label="Save Self-Care Sanctuary to wishlist" onclick="toggleWishlist(this)" class="absolute top-3 right-3 inline-flex h-9 w-9 items-center justify-center rounded-full bg-light-surface-container-lowest/90 text-light-on-surface border border-light-outline-variant transition-colors duration-state-change hover:text-light-primary">
+                    <span class="material-symbols-outlined text-title-md" aria-hidden="true">favorite</span>
+                  </button>
+                </div>
+                <div class="p-5 flex flex-col gap-2">
+                  <div class="flex items-center gap-1.5">
+                    <span class="material-symbols-outlined text-title-md text-champagne-gold" style="font-variation-settings: &#39;FILL&#39; 1;" aria-hidden="true">star</span>
+                    <span class="font-label text-label-sm text-light-on-surface tabular-nums" data-design-text-token="label-sm">4.9 (112)</span>
+                  </div>
+                  <h3 class="font-headline text-headline-sm text-light-on-surface" data-design-text-token="headline-sm">Self-Care Sanctuary</h3>
+                  <p class="font-body text-body-md text-light-on-surface-variant" data-design-text-token="body-md">Chamomile bath salts, rose petal soap, silk mask &amp; ceramic mug.</p>
+                </div>
+              </div>
+              <footer class="px-5 pb-5 pt-2 flex flex-col gap-3">
+                <p class="font-title text-title-lg text-light-primary tabular-nums" data-design-text-token="title-lg">₹2,999</p>
+                <button type="button" onclick="addToBag(this)" class="w-full inline-flex items-center justify-center gap-2 rounded-full bg-light-primary text-light-on-primary px-5 py-2.5 transition-colors duration-state-change ease-state-change hover:bg-burgundy/90">
+                  <span class="material-symbols-outlined text-title-md" aria-hidden="true">shopping_bag</span>
+                  <span class="font-label text-label-lg" data-design-text-token="label-lg">Add to Bag</span>
+                </button>
+              </footer>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6. Exclusive Personalized Gifting Section -->
+      <section id="personalized" class="bg-light-primary-container py-16 lg:py-20">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+          <div class="lg:col-span-6">
+            <div class="rounded-lg overflow-hidden border border-light-outline-variant shadow-md bg-light-surface-container-lowest">
+              <img src="https://lh3.googleusercontent.com/aida/ALJJyrDUpcmnahyCNZ1yWObkxrx2r2Vovgv3UTuraofti1H0s7BJlWNelAjztoq6sLpghx-DnXmWVzdNe-rXpWlYSUl9hSZn2yVzoHr9pN1UgwpWeTTTGs56hRr0pStV2gXCH6GHVei703UIauPQT7Yfwuq-qP_Y_j9_R8jygHox4JwbmESz5zWx_AjWRVPIVCbdUbEIKG6COGgrliIrz4dtbeY5-3ZapXTmq8NzqKwhs8jmBKiRSmTgbRPhHeyiXLQzOQ" alt="Gold foil monogrammed ivory gift box with burgundy wax seal and calligraphy note" class="w-full aspect-[4/3] object-cover">
+            </div>
+          </div>
+
+          <div class="lg:col-span-6 flex flex-col items-start gap-6">
+            <span class="font-label text-label-sm uppercase text-light-on-primary-container" data-design-text-token="label-sm">Bespoke Atelier Touches</span>
+            <h2 class="font-headline text-display-md-mobile lg:text-display-md text-light-on-surface text-balance" data-design-text-token="display-md">
+              Personalized to Their Name, Sealed with Care.
+            </h2>
+            <p class="font-body text-body-lg text-light-on-surface-variant max-w-prose text-pretty" data-design-text-token="body-lg">
+              Elevate every keepsake box with gold-foil monogramming, custom burgundy wax seals, and handwritten cotton-paper notes crafted by our Mumbai studio calligraphers.
+            </p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 w-full pt-2">
+              <div class="rounded-md bg-light-surface-container-lowest p-4 border border-light-outline-variant flex flex-col gap-1.5">
+                <span class="material-symbols-outlined text-light-primary" aria-hidden="true">font_download</span>
+                <span class="font-title text-title-md text-light-on-surface" data-design-text-token="title-md">Gold Foil Initials</span>
+                <span class="font-body text-body-md text-light-on-surface-variant" data-design-text-token="body-md">Embossed on box lid</span>
+              </div>
+              <div class="rounded-md bg-light-surface-container-lowest p-4 border border-light-outline-variant flex flex-col gap-1.5">
+                <span class="material-symbols-outlined text-light-primary" aria-hidden="true">verified</span>
+                <span class="font-title text-title-md text-light-on-surface" data-design-text-token="title-md">Brass Wax Seal</span>
+                <span class="font-body text-body-md text-light-on-surface-variant" data-design-text-token="body-md">Burgundy or gold crest</span>
+              </div>
+              <div class="rounded-md bg-light-surface-container-lowest p-4 border border-light-outline-variant flex flex-col gap-1.5">
+                <span class="material-symbols-outlined text-light-primary" aria-hidden="true">history_edu</span>
+                <span class="font-title text-title-md text-light-on-surface" data-design-text-token="title-md">Calligraphy Card</span>
+                <span class="font-body text-body-md text-light-on-surface-variant" data-design-text-token="body-md">Your heartfelt message</span>
+              </div>
+            </div>
+
+            <a href="#build-your-hamper" data-component-id="button-primary" data-component-type="button" data-component-variant="primary" class="inline-flex items-center justify-center gap-2 rounded-full bg-light-primary text-light-on-primary px-7 py-3.5 shadow-sm transition-colors duration-state-change ease-state-change hover:bg-burgundy/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-light-primary focus-visible:ring-offset-2">
+              <span class="font-label text-label-lg" data-design-text-token="label-lg">Explore Personalized Gifts</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- 7. Build Your Own Hamper Promotional Section -->
+      <section id="build-your-hamper" class="bg-light-surface py-16 lg:py-20">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 rounded-xl bg-light-surface-container-lowest border border-light-outline-variant p-8 lg:p-12 shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+          <div class="lg:col-span-6 flex flex-col items-start gap-6">
+            <span data-component-id="badge-signature" data-component-type="badge" data-component-variant="status" class="inline-flex items-center gap-1.5 rounded-full bg-light-secondary-container text-light-on-secondary-container px-3.5 py-1">
+              <span class="material-symbols-outlined text-title-md" aria-hidden="true">palette</span>
+              <span class="font-label text-label-sm uppercase" data-design-text-token="label-sm">Signature Experience</span>
+            </span>
+
+            <h2 class="font-headline text-display-md-mobile lg:text-display-md text-light-on-surface text-balance" data-design-text-token="display-md">
+              Build Your Own Hamper
+            </h2>
+            <p class="font-body text-body-lg text-light-on-surface-variant max-w-prose text-pretty" data-design-text-token="body-lg">
+              Become the curator. Pick a keepsake box, hand-select artisanal chocolates, candles, skincare, and florals, choose your ribbon, and watch your bespoke hamper come together live.
+            </p>
+
+            <!-- 4-Step Visual Preview -->
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 w-full">
+              <div class="rounded bg-light-surface-container-low border border-light-outline-variant p-3.5 flex flex-col gap-1">
+                <span class="font-mono text-mono-sm text-light-primary" data-design-text-token="mono-sm">STEP 1</span>
+                <span class="font-title text-title-md text-light-on-surface" data-design-text-token="title-md">Choose Box</span>
+              </div>
+              <div class="rounded bg-light-surface-container-low border border-light-outline-variant p-3.5 flex flex-col gap-1">
+                <span class="font-mono text-mono-sm text-light-primary" data-design-text-token="mono-sm">STEP 2</span>
+                <span class="font-title text-title-md text-light-on-surface" data-design-text-token="title-md">Add Treats</span>
+              </div>
+              <div class="rounded bg-light-surface-container-low border border-light-outline-variant p-3.5 flex flex-col gap-1">
+                <span class="font-mono text-mono-sm text-light-primary" data-design-text-token="mono-sm">STEP 3</span>
+                <span class="font-title text-title-md text-light-on-surface" data-design-text-token="title-md">Pick Ribbon</span>
+              </div>
+              <div class="rounded bg-light-surface-container-low border border-light-outline-variant p-3.5 flex flex-col gap-1">
+                <span class="font-mono text-mono-sm text-light-primary" data-design-text-token="mono-sm">STEP 4</span>
+                <span class="font-title text-title-md text-light-on-surface" data-design-text-token="title-md">Note &amp; Date</span>
+              </div>
+            </div>
+
+            <button data-component-id="button-with-icon" data-component-type="button" data-component-variant="with-icon" type="button" class="inline-flex items-center justify-center gap-2 rounded-full bg-light-primary text-light-on-primary px-7 py-3.5 shadow-sm transition-colors duration-state-change ease-state-change hover:bg-burgundy/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-light-primary focus-visible:ring-offset-2">
+              <span class="material-symbols-outlined text-title-md" aria-hidden="true">redeem</span>
+              <span class="font-label text-label-lg" data-design-text-token="label-lg">Start Building Your Hamper</span>
+            </button>
+          </div>
+
+          <div class="lg:col-span-6">
+            <div class="rounded-lg overflow-hidden border border-light-outline-variant">
+              <img src="https://lh3.googleusercontent.com/aida/ALJJyrCBzfa3KCaftbpFM8jSZBx7X6_LQ-mKYzOwPucurqk2HqhOc_uP8nVX3eA_9pIFWG7gWpxBSMeisY6GOmQL0GiER2fIBPL_GwwwKNns_tME9FcLMK2PQ0rrQ4kJa29eCEV8f-sdQYJgD-SWdWz3h_ULLeUC7Np05Hkp_84zAAF3oViIwQv9YxHZ4R3NCkT5I72fIMe1KfQ85zDXZLMM-Baa5Yp2xjdHJJk7GWgumbsj8so2wftyPX-B_DpF__2OVQ" alt="Flatlay of keepsake gift boxes, satin ribbons, chocolates, botanical skincare, and dried florals" class="w-full aspect-[4/3] object-cover">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 8. Customer Testimonials & Ratings -->
+      <section class="bg-light-surface-container-low py-16 lg:py-20 border-y border-light-outline-variant">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col gap-10">
+          <div class="text-center max-w-2xl mx-auto flex flex-col gap-2">
+            <span class="font-label text-label-sm uppercase text-light-primary" data-design-text-token="label-sm">Words of Warmth</span>
+            <h2 class="font-headline text-headline-lg-mobile lg:text-headline-lg text-light-on-surface" data-design-text-token="headline-lg">Loved Across India</h2>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
+            <!-- Review 1 -->
+            <article data-component-id="card-elevated" data-component-type="card" data-component-variant="elevated" class="h-full rounded-md bg-light-surface-container-lowest border border-light-outline-variant p-6 shadow-sm flex flex-col justify-between gap-5">
+              <div class="flex flex-col gap-3">
+                <div class="flex items-center gap-1 text-champagne-gold" aria-label="5 out of 5 stars">
+                  <span class="material-symbols-outlined text-title-md" style="font-variation-settings: &#39;FILL&#39; 1;" aria-hidden="true">star</span>
+                  <span class="material-symbols-outlined text-title-md" style="font-variation-settings: &#39;FILL&#39; 1;" aria-hidden="true">star</span>
+                  <span class="material-symbols-outlined text-title-md" style="font-variation-settings: &#39;FILL&#39; 1;" aria-hidden="true">star</span>
+                  <span class="material-symbols-outlined text-title-md" style="font-variation-settings: &#39;FILL&#39; 1;" aria-hidden="true">star</span>
+                  <span class="material-symbols-outlined text-title-md" style="font-variation-settings: &#39;FILL&#39; 1;" aria-hidden="true">star</span>
+                </div>
+                <p class="font-body text-body-md text-light-on-surface-variant text-pretty" data-design-text-token="body-md">
+                  &#34;The Royal Festive Box arrived wrapped in burgundy satin with a handwritten note. My parents in Pune were genuinely moved by the presentation.&#34;
+                </p>
+              </div>
+              <header class="flex items-center justify-between gap-4 pt-3 border-t border-light-outline-variant">
+                <h3 class="font-headline text-headline-sm text-light-on-surface" data-design-text-token="headline-sm">Ananya Deshmukh</h3>
+                <p class="font-label text-label-sm text-light-on-surface-variant" data-design-text-token="label-sm">Mumbai</p>
+              </header>
+            </article>
+
+            <!-- Review 2 -->
+            <article data-component-id="card-elevated" data-component-type="card" data-component-variant="elevated" class="h-full rounded-md bg-light-surface-container-lowest border border-light-outline-variant p-6 shadow-sm flex flex-col justify-between gap-5">
+              <div class="flex flex-col gap-3">
+                <div class="flex items-center gap-1 text-champagne-gold" aria-label="5 out of 5 stars">
+                  <span class="material-symbols-outlined text-title-md" style="font-variation-settings: &#39;FILL&#39; 1;" aria-hidden="true">star</span>
+                  <span class="material-symbols-outlined text-title-md" style="font-variation-settings: &#39;FILL&#39; 1;" aria-hidden="true">star</span>
+                  <span class="material-symbols-outlined text-title-md" style="font-variation-settings: &#39;FILL&#39; 1;" aria-hidden="true">star</span>
+                  <span class="material-symbols-outlined text-title-md" style="font-variation-settings: &#39;FILL&#39; 1;" aria-hidden="true">star</span>
+                  <span class="material-symbols-outlined text-title-md" style="font-variation-settings: &#39;FILL&#39; 1;" aria-hidden="true">star</span>
+                </div>
+                <p class="font-body text-body-md text-light-on-surface-variant text-pretty" data-design-text-token="body-md">
+                  &#34;We ordered 65 bespoke wedding welcome hampers using the builder. Every box had our monogram in gold foil and arrived on schedule in Udaipur.&#34;
+                </p>
+              </div>
+              <header class="flex items-center justify-between gap-4 pt-3 border-t border-light-outline-variant">
+                <h3 class="font-headline text-headline-sm text-light-on-surface" data-design-text-token="headline-sm">Rohan &amp; Meera</h3>
+                <p class="font-label text-label-sm text-light-on-surface-variant" data-design-text-token="label-sm">New Delhi</p>
+              </header>
+            </article>
+
+            <!-- Review 3 -->
+            <article data-component-id="card-elevated" data-component-type="card" data-component-variant="elevated" class="h-full rounded-md bg-light-surface-container-lowest border border-light-outline-variant p-6 shadow-sm flex flex-col justify-between gap-5">
+              <div class="flex flex-col gap-3">
+                <div class="flex items-center gap-1 text-champagne-gold" aria-label="5 out of 5 stars">
+                  <span class="material-symbols-outlined text-title-md" style="font-variation-settings: &#39;FILL&#39; 1;" aria-hidden="true">star</span>
+                  <span class="material-symbols-outlined text-title-md" style="font-variation-settings: &#39;FILL&#39; 1;" aria-hidden="true">star</span>
+                  <span class="material-symbols-outlined text-title-md" style="font-variation-settings: &#39;FILL&#39; 1;" aria-hidden="true">star</span>
+                  <span class="material-symbols-outlined text-title-md" style="font-variation-settings: &#39;FILL&#39; 1;" aria-hidden="true">star</span>
+                  <span class="material-symbols-outlined text-title-md" style="font-variation-settings: &#39;FILL&#39; 1;" aria-hidden="true">star</span>
+                </div>
+                <p class="font-body text-body-md text-light-on-surface-variant text-pretty" data-design-text-token="body-md">
+                  &#34;The Self-Care Sanctuary hamper smells heavenly and the rosewater mist is my sister&#39;s new favourite. Bliss Basket never disappoints.&#34;
+                </p>
+              </div>
+              <header class="flex items-center justify-between gap-4 pt-3 border-t border-light-outline-variant">
+                <h3 class="font-headline text-headline-sm text-light-on-surface" data-design-text-token="headline-sm">Kavya Nair</h3>
+                <p class="font-label text-label-sm text-light-on-surface-variant" data-design-text-token="label-sm">Bengaluru</p>
+              </header>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- 9. Instagram-Inspired Gallery -->
+      <section class="bg-light-surface py-16 lg:py-20">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col gap-10">
+          <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+            <div class="flex flex-col gap-2">
+              <span class="font-label text-label-sm uppercase text-light-primary" data-design-text-token="label-sm">@blissbasket.in</span>
+              <h2 class="font-headline text-headline-lg-mobile lg:text-headline-lg text-light-on-surface" data-design-text-token="headline-lg">Moments Unboxed</h2>
+            </div>
+            <p class="font-body text-body-md text-light-on-surface-variant" data-design-text-token="body-md">
+              Share your celebrations with #GiftsThatFeelLikeHappiness
+            </p>
+          </div>
+
+          <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
+            <div class="rounded-md overflow-hidden border border-light-outline-variant bg-light-surface-container-low">
+              <img src="https://lh3.googleusercontent.com/aida/ALJJyrA2_DGjdEeLWonvJqFfT_kHoTXa4SgBRzZ8WLFkYprap9AlZoWOyJ-34pPBtKhdy05oDHN6bDaIY5KmTjp2sqBQFAF-jpFShh1GLlqMmEVkFWe9bS7U5MuCae422QDBnl1wVMT7BP3pBT6GQqgTLsc1fyZOZnlvOBLhDJyZGoYWdgX5Y7-8f9bGbC4NdpsYvKEmQ5Fdg6_1sE8ljHKec8WgXz1vdPLzlbXPPXyrBwiKN2HfWOiLrdcCknMa" alt="Hands tying a burgundy silk ribbon on an ivory Bliss Basket box" class="w-full aspect-square object-cover transition-transform duration-surface-enter hover:scale-105">
+            </div>
+            <div class="rounded-md overflow-hidden border border-light-outline-variant bg-light-surface-container-low">
+              <img src="https://lh3.googleusercontent.com/aida/ALJJyrAJOUnMefDVfMgBZzyrD3Xg75_-4mVR905Ka7jSx2xLIlR6HY-HVniQ9l2ZMku2VIidgo-A39yARzqRFHH5FteFTFbkb06ujdqW5je_atHWN-RC45jaE4gl8vN4vsCxyh3s5WStjhDr4Xgkgyqf5OzDB9De47HHiqj_wveb5Op9R0sagGY9lW3MXBFLXZAHrzesOEOvb62rBD88_n9krjFy-lVzOShYbMSE1g-GX9UB6RcpLnp59l33O18" alt="Luxury Indian wedding favour boxes with white jasmine" class="w-full aspect-square object-cover transition-transform duration-surface-enter hover:scale-105">
+            </div>
+            <div class="rounded-md overflow-hidden border border-light-outline-variant bg-light-surface-container-low">
+              <img src="https://lh3.googleusercontent.com/aida/ALJJyrAQNHm4-xcms868O-BWEX5YtdGIGnbyj-AHWGCKv0ybknjRSb-5YDhQ3PRM3DEDObsHKbnRgvAJn5LGagSQfOkT7ueOhG-BMs8l0BkXeixFRwovNGEfus-6yWVztsa_sqAO2n7qqJFkFo_J-aCVoq-PwKxB94DIIddCl54_AexecTCzE68qvnCvEXycDYve4JiwiEMJuwHPTKATzd9DBQqliAbG0vH7JvlZKAl_feIxN4gg_-a-9AwtDEQY" alt="Open gift hamper with lit soy candle and thank you note" class="w-full aspect-square object-cover transition-transform duration-surface-enter hover:scale-105">
+            </div>
+            <div class="rounded-md overflow-hidden border border-light-outline-variant bg-light-surface-container-low">
+              <img src="https://lh3.googleusercontent.com/aida/ALJJyrCRyUF3nUdWEv5bM4SRfRCRwQrpHZRp23Qobi9QcUyI9N3B8LJyjJmIxzceB68Xa4h5TlvhcnGNSgzgPtry60bgFOK6iWQTxYbipIByA5dvBCrigSd13XhaF1db6Es8mJ97zp_VMJU7xZ3-kvHd10M-tatFS2dOG3euTPWPKPG3rFuPthQeNi5tI1crZRRkps4NNWY7DZucjXQRJH52IS3RyY13CW1jjmx6UJCf-70Nbg8f8wQpucXkIRL6" alt="Curated corporate Diwali hampers ready for dispatch" class="w-full aspect-square object-cover transition-transform duration-surface-enter hover:scale-105">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 10. Newsletter Subscription Section -->
+      <section class="bg-light-primary-container py-16">
+        <div class="max-w-3xl mx-auto px-6 text-center flex flex-col items-center gap-6">
+          <span class="font-label text-label-sm uppercase text-light-on-primary-container" data-design-text-token="label-sm">The Bliss Circle</span>
+          <h2 class="font-headline text-headline-lg-mobile lg:text-headline-lg text-light-on-surface text-balance" data-design-text-token="headline-lg">
+            Receive Festive Previews &amp; 10% Off Your First Gift
+          </h2>
+          <p class="font-body text-body-md text-light-on-surface-variant max-w-prose" data-design-text-token="body-md">
+            Join 18,000+ thoughtful gifters across India for early access to Diwali, Rakhi, and limited-edition seasonal hampers.
+          </p>
+
+          <form onsubmit="handleNewsletter(event)" class="w-full max-w-lg flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
+            <label for="newsletter-email" class="sr-only">Email Address</label>
+            <div class="relative flex-1 flex items-center">
+              <span class="material-symbols-outlined absolute left-4 text-light-outline" aria-hidden="true">mail</span>
+              <input id="newsletter-email" type="email" required placeholder="Enter your email address" class="w-full rounded-full border border-light-outline-variant bg-light-surface-container-lowest pl-11 pr-4 py-3.5 font-body text-body-md text-light-on-surface placeholder:text-light-outline focus:border-light-primary focus:outline-none focus:ring-1 focus:ring-light-primary">
+            </div>
+            <button data-component-id="button-primary" data-component-type="button" data-component-variant="primary" type="submit" class="inline-flex items-center justify-center gap-2 rounded-full bg-light-primary text-light-on-primary px-7 py-3.5 shadow-sm transition-colors duration-state-change ease-state-change hover:bg-burgundy/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-light-primary focus-visible:ring-offset-2 shrink-0">
+              <span class="font-label text-label-lg" data-design-text-token="label-lg">Join the Circle</span>
+            </button>
+          </form>
+          <p id="newsletter-feedback" class="hidden font-body text-body-md text-light-primary font-bold" role="status"></p>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- 11. Premium Footer -->
+    <footer class="bg-light-on-surface text-light-surface pt-16 pb-10">
+      <div class="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-light-surface/15">
+        <!-- Brand Column -->
+        <div class="lg:col-span-4 flex flex-col gap-4">
+          <div class="flex flex-col">
+            <span class="font-headline text-headline-md text-light-surface" data-design-text-token="headline-md">BLISS BASKET</span>
+            <span class="font-label text-label-sm text-champagne-gold" data-design-text-token="label-sm">Gifts That Feel Like Happiness.</span>
+          </div>
+          <p class="font-body text-body-md text-light-surface/80 max-w-sm text-pretty" data-design-text-token="body-md">
+            Handcrafted luxury gift hampers celebrating Indian warmth, artisanal craft, and thoughtful moments—delivered across 19,000+ PIN codes.
+          </p>
+          <div class="flex items-center gap-3 pt-2">
+            <a href="#top" aria-label="Instagram" class="inline-flex h-9 w-9 items-center justify-center rounded-full border border-light-surface/25 text-light-surface hover:border-champagne-gold hover:text-champagne-gold transition-colors">
+              <span class="material-symbols-outlined text-title-md" aria-hidden="true">photo_camera</span>
+            </a>
+            <a href="#top" aria-label="WhatsApp Concierge" class="inline-flex h-9 w-9 items-center justify-center rounded-full border border-light-surface/25 text-light-surface hover:border-champagne-gold hover:text-champagne-gold transition-colors">
+              <span class="material-symbols-outlined text-title-md" aria-hidden="true">chat</span>
+            </a>
+            <a href="#top" aria-label="Email Us" class="inline-flex h-9 w-9 items-center justify-center rounded-full border border-light-surface/25 text-light-surface hover:border-champagne-gold hover:text-champagne-gold transition-colors">
+              <span class="material-symbols-outlined text-title-md" aria-hidden="true">mail</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Shop & Occasions -->
+        <div class="lg:col-span-2 flex flex-col gap-3">
+          <h3 class="font-title text-title-md text-champagne-gold" data-design-text-token="title-md">Curations</h3>
+          <ul class="flex flex-col gap-2.5 font-body text-body-md text-light-surface/80">
+            <li><a href="#bestsellers" class="hover:text-light-surface transition-colors">Bestselling Hampers</a></li>
+            <li><a href="#build-your-hamper" class="hover:text-light-surface transition-colors">Build Your Hamper</a></li>
+            <li><a href="#occasions" class="hover:text-light-surface transition-colors">Wedding &amp; Trousseau</a></li>
+            <li><a href="#occasions" class="hover:text-light-surface transition-colors">Corporate Gifting</a></li>
+            <li><a href="#personalized" class="hover:text-light-surface transition-colors">Personalized Boxes</a></li>
+          </ul>
+        </div>
+
+        <!-- Policies & Support -->
+        <div class="lg:col-span-3 flex flex-col gap-3">
+          <h3 class="font-title text-title-md text-champagne-gold" data-design-text-token="title-md">Customer Care &amp; Policies</h3>
+          <ul class="flex flex-col gap-2.5 font-body text-body-md text-light-surface/80">
+            <li><a href="#top" class="hover:text-light-surface transition-colors">Track Your Order</a></li>
+            <li><a href="#top" class="hover:text-light-surface transition-colors">Shipping Policy</a></li>
+            <li><a href="#top" class="hover:text-light-surface transition-colors">Return &amp; Refund Policy</a></li>
+            <li><a href="#top" class="hover:text-light-surface transition-colors">Privacy Policy</a></li>
+            <li><a href="#top" class="hover:text-light-surface transition-colors">Terms &amp; Conditions</a></li>
+            <li><a href="#top" class="hover:text-light-surface transition-colors">FAQs</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Details -->
+        <div class="lg:col-span-3 flex flex-col gap-3">
+          <h3 class="font-title text-title-md text-champagne-gold" data-design-text-token="title-md">Gifting Concierge</h3>
+          <div class="flex flex-col gap-2.5 font-body text-body-md text-light-surface/80">
+            <p class="flex items-start gap-2">
+              <span class="material-symbols-outlined text-title-md text-champagne-gold shrink-0 mt-0.5" aria-hidden="true">location_on</span>
+              <span>14, Rope Walk Lane, Kala Ghoda, Fort, Mumbai 400001</span>
+            </p>
+            <p class="flex items-center gap-2">
+              <span class="material-symbols-outlined text-title-md text-champagne-gold shrink-0" aria-hidden="true">call</span>
+              <span class="tabular-nums">+91 22 4890 2100</span>
+            </p>
+            <p class="flex items-center gap-2">
+              <span class="material-symbols-outlined text-title-md text-champagne-gold shrink-0" aria-hidden="true">mail</span>
+              <span>concierge@blissbasket.in</span>
+            </p>
+            <p class="font-label text-label-sm text-light-surface/60 pt-1">Mon – Sat · 10:00 AM – 7:30 PM IST</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-6 lg:px-12 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 font-body text-body-md text-light-surface/60">
+        <p>© 2026 Bliss Basket Luxury Gifting Pvt. Ltd. All rights reserved.</p>
+        <p>Payments: UPI · Cards · Net Banking · Wallets</p>
+      </div>
+    </footer>
+
+  </div>
+
+  <script>
+    function toggleWishlist(btn) {
+      var icon = btn.querySelector('.material-symbols-outlined');
+      var isSaved = btn.getAttribute('data-saved') === 'true';
+      if (isSaved) {
+        btn.setAttribute('data-saved', 'false');
+        icon.style.fontVariationSettings = "'FILL' 0";
+        btn.classList.remove('text-light-primary');
+      } else {
+        btn.setAttribute('data-saved', 'true');
+        icon.style.fontVariationSettings = "'FILL' 1";
+        btn.classList.add('text-light-primary');
+      }
+    }
+
+    function addToBag(btn) {
+      var badge = document.querySelector('#bag-count-badge span');
+      var current = parseInt(badge.textContent, 10) || 0;
+      badge.textContent = String(current + 1);
+      var label = btn.querySelector('span[data-design-text-token="label-lg"]');
+      var original = label.textContent;
+      label.textContent = 'Added to Bag';
+      setTimeout(function () {
+        label.textContent = original;
+      }, 1400);
+    }
+
+    function handleNewsletter(e) {
+      e.preventDefault();
+      var feedback = document.getElementById('newsletter-feedback');
+      feedback.textContent = 'Welcome to the Bliss Circle! Use code BLISS10 at checkout.';
+      feedback.classList.remove('hidden');
+    }
+  </script>
+
+
+</body></html>

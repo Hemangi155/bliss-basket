@@ -1,26 +1,200 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Red+Hat+Mono:wght@500&display=swap");
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* ── Colors ── */
+  --color-warm-ivory: #FFF9F3;
+  --color-blush-pink: #F4DDE2;
+  --color-burgundy: #762D43;
+  --color-champagne-gold: #C9A66B;
+  --color-soft-rose: #EBC6CE;
+  --color-dark-text: #292329;
+  --color-success: #2E6F40;
+  --color-on-success: #FFFFFF;
+  --color-warning: #9A6300;
+  --color-on-warning: #FFFFFF;
+  --color-error: #BA1A1A;
+  --color-on-error: #FFFFFF;
+
+  --color-light-primary: #762D43;
+  --color-light-on-primary: #FFFFFF;
+  --color-light-primary-container: #F4DDE2;
+  --color-light-on-primary-container: #5A172D;
+  --color-light-secondary: #C9A66B;
+  --color-light-on-secondary: #292329;
+  --color-light-secondary-container: #FFEED8;
+  --color-light-on-secondary-container: #422C00;
+  --color-light-tertiary: #EBC6CE;
+  --color-light-on-tertiary: #292329;
+  --color-light-background: #FFF9F3;
+  --color-light-on-background: #292329;
+  --color-light-surface: #FFF9F3;
+  --color-light-on-surface: #292329;
+  --color-light-surface-container-lowest: #FFFFFF;
+  --color-light-surface-container-low: #FDF3EC;
+  --color-light-surface-container: #F4DDE2;
+  --color-light-surface-container-high: #EBC6CE;
+  --color-light-surface-variant: #F5DDE0;
+  --color-light-on-surface-variant: #534346;
+  --color-light-outline: #867276;
+  --color-light-outline-variant: #E3CFD3;
+
+  /* ── Border Radius ── */
+  --radius-sm: 4px;
+  --radius: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+
+  /* ── Fonts ── */
+  --font-display: "Libre Baskerville", serif;
+  --font-headline: "Libre Baskerville", serif;
+  --font-title: "Lato", sans-serif;
+  --font-body: "Lato", sans-serif;
+  --font-label: "Lato", sans-serif;
+  --font-mono: "Red Hat Mono", monospace;
+
+  /* ── Font Sizes ── */
+  --text-display-lg: 52px;
+  --text-display-lg--line-height: 60px;
+  --text-display-lg--letter-spacing: -0.5px;
+  --text-display-lg--font-weight: 700;
+
+  --text-display-lg-mobile: 32px;
+  --text-display-lg-mobile--line-height: 40px;
+  --text-display-lg-mobile--letter-spacing: -0.25px;
+  --text-display-lg-mobile--font-weight: 700;
+
+  --text-display-md: 40px;
+  --text-display-md--line-height: 48px;
+  --text-display-md--letter-spacing: -0.25px;
+  --text-display-md--font-weight: 700;
+
+  --text-display-md-mobile: 28px;
+  --text-display-md-mobile--line-height: 36px;
+  --text-display-md-mobile--letter-spacing: 0px;
+  --text-display-md-mobile--font-weight: 700;
+
+  --text-headline-lg: 34px;
+  --text-headline-lg--line-height: 42px;
+  --text-headline-lg--letter-spacing: -0.25px;
+  --text-headline-lg--font-weight: 700;
+
+  --text-headline-lg-mobile: 24px;
+  --text-headline-lg-mobile--line-height: 32px;
+  --text-headline-lg-mobile--letter-spacing: 0px;
+  --text-headline-lg-mobile--font-weight: 700;
+
+  --text-headline-md: 24px;
+  --text-headline-md--line-height: 32px;
+  --text-headline-md--letter-spacing: 0px;
+  --text-headline-md--font-weight: 700;
+
+  --text-headline-sm: 20px;
+  --text-headline-sm--line-height: 28px;
+  --text-headline-sm--letter-spacing: 0px;
+  --text-headline-sm--font-weight: 400;
+
+  --text-title-lg: 18px;
+  --text-title-lg--line-height: 26px;
+  --text-title-lg--letter-spacing: 0px;
+  --text-title-lg--font-weight: 700;
+
+  --text-title-md: 16px;
+  --text-title-md--line-height: 24px;
+  --text-title-md--letter-spacing: 0.1px;
+  --text-title-md--font-weight: 700;
+
+  --text-body-lg: 16px;
+  --text-body-lg--line-height: 26px;
+  --text-body-lg--letter-spacing: 0.15px;
+  --text-body-lg--font-weight: 400;
+
+  --text-body-md: 14px;
+  --text-body-md--line-height: 22px;
+  --text-body-md--letter-spacing: 0.15px;
+  --text-body-md--font-weight: 400;
+
+  --text-label-lg: 14px;
+  --text-label-lg--line-height: 20px;
+  --text-label-lg--letter-spacing: 0.4px;
+  --text-label-lg--font-weight: 700;
+
+  --text-label-sm: 12px;
+  --text-label-sm--line-height: 16px;
+  --text-label-sm--letter-spacing: 0.6px;
+  --text-label-sm--font-weight: 700;
+
+  --text-mono-sm: 13px;
+  --text-mono-sm--line-height: 18px;
+  --text-mono-sm--letter-spacing: 0.2px;
+  --text-mono-sm--font-weight: 500;
+
+  /* ── Transitions ── */
+  --transition-duration-state-change: 150ms;
+  --transition-duration-card-hover: 200ms;
+  --transition-duration-surface-enter: 300ms;
+
+  --ease-state-change: ease-out;
+  --ease-card-hover: cubic-bezier(0.2, 0, 0, 1);
+  --ease-surface-enter: cubic-bezier(0.2, 0, 0, 1);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* Selection color */
+::selection {
+  background-color: var(--color-light-primary-container);
+  color: var(--color-light-on-primary-container);
+}
+
+/* Hide scrollbar utility */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Subtle animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideLeft {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-slideUp {
+  animation: slideUp 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-slideLeft {
+  animation: slideLeft 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
